@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev Hub | Zhasulan Akkulov</title>
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hub.css">
+</head>
+<body class="hub-enhanced">
+
+    
+    <div class="navbar navbar-expand-lg navbar-dark site-header" role="navigation" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="index.html#home">ZA | Zhasulan Akkulov</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation" aria-controls="mainNavigation"
+                    aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+
+                    <div class="collapse navbar-collapse" id="mainNavigation">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#home">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#projects">Projects</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="game-dev-hub.html" aria-current="page">Game Dev Hub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="registration.html">Registration</a>
+                            </li>
+                        </ul>
+                    </div>
+        </div>
+    </div>
+
+    <main class="container-fluid page-content hub-page">
+        <header class="hero hub-intro">
+            <p class="section-label">Zhasulan Akkulov</p>
+            <h1>Game Dev Hub</h1>
+            <h2 id="hub-greeting">Welcome to my portfolio</h2>
+            <p class="personal-headline">Game Developer / Unity and gameplay programming</p>
+            <p class="intro">I create gameplay systems, work with small teams and help turn ideas into playable games.</p>
+            <div class="hub-actions" role="group" aria-label="Page theme">
+                <button class="button" id="light-theme" type="button" aria-pressed="false">Light theme</button>
+                <button class="button" id="dark-theme" type="button" aria-pressed="true">Dark theme</button>
+            </div>
+        </header>
+        <div class="row g-4">
+            <div class="col-12 col-lg-6 hub-column">
+                <section class="page-sidebar hub-panel" aria-labelledby="profile-heading">
+                    <p class="section-label">The creator</p>
+                    <h2 id="profile-heading">Developer Profile</h2>
+                    <h3 id="profile-name">Your developer profile</h3>
+                    <p class="subtitle" id="profile-role">Game developer</p>
+                    <p><b>Specialization:</b> Gameplay and prototyping</p>
+                    <h3>Explore these interests</h3>
+                    <p id="profile-hobbies"></p>
+                    <dl class="profile-details">
+                        <dt>Birth year</dt><dd id="profile-year">Not set</dd>
+                        <dt>Age</dt><dd id="profile-age">Not set</dd>
+                        <dt>Interests to explore</dt><dd id="hobby-count"></dd>
+                    </dl>
+                    <h3>Make it yours</h3>
+                    <form id="profile-form">
+                        <label for="username">Username</label>
+                        <input id="username" name="username" type="text" required minlength="2" maxlength="50" pattern=".*\S.*" autocomplete="nickname" placeholder="Your name or developer handle" aria-describedby="username-help">
+                        <p class="hub-note" id="username-help">Use 2-50 characters, including at least one non-space character.</p>
+                        <label for="birth-year">Birth Year</label>
+                        <input id="birth-year" name="birth-year" type="number" required min="1900" step="1" placeholder="Enter your birth year" aria-describedby="year-help">
+                        <p class="hub-note" id="year-help">Used to estimate your age by calendar year. Enter a whole year from 1900 to the current year.</p>
+                        <button class="button" type="submit">Create / Update Profile</button>
+                    </form>
+                    <p class="hub-message" id="profile-message" role="status">Add your details to create a profile for this session.</p>
+                </section>
+                <section class="page-sidebar hub-panel" aria-labelledby="journal-heading">
+                    <p class="section-label">Behind the games</p>
+                    <h2 id="journal-heading">Developer Journal</h2>
+                    <h3>About Me</h3>
+                    <div id="journal-about">
+                        <p>I develop games in Unity and work on gameplay systems. In small teams, I also help with game design and project planning.</p>
+                        <p><b>Current focus:</b> Gameplay prototypes and front-end development.</p>
+                        <h3>A few project notes</h3>
+                        <ul>
+                            <li>Criminally Delicious brings together three minigames.</li>
+                            <li>Larping Skeleton was made in 64 hours.</li>
+                            <li>Deep Dive combines diving with equipment upgrades.</li>
+                        </ul>
+                    </div>
+                    <div class="hub-actions" role="group" aria-label="About Me visibility">
+                        <button class="button" id="hide-about" type="button" aria-controls="journal-about">Hide</button>
+                        <button class="button" id="show-about" type="button" aria-controls="journal-about">Show</button>
+                        <button class="button" id="toggle-about" type="button" aria-controls="journal-about">Toggle</button>
+                    </div>
+                    <h3>Interests &amp; directions</h3>
+                    <div class="hub-actions interest-actions">
+                        <button class="button" id="expand-interests" type="button">Expand all</button>
+                        <button class="button" id="collapse-interests" type="button">Collapse all</button>
+                    </div>
+                    <h4><button class="interest-toggle" type="button" aria-controls="interest-games" aria-expanded="false">Game Development</button></h4>
+                    <div class="interest-panel" id="interest-games"><p>Gameplay programming, game design and small, playable prototypes. A strong core mechanic comes first.</p></div>
+                    <h4><button class="interest-toggle" type="button" aria-controls="interest-creative" aria-expanded="false">Music &amp; Creative Work</button></h4>
+                    <div class="interest-panel" id="interest-creative"><p>Sound, visual rhythm and atmosphere can help tell a game's story. These are creative directions to explore in future prototypes.</p></div>
+                    <h4><button class="interest-toggle" type="button" aria-controls="interest-learning" aria-expanded="false">Learning &amp; Interests</button></h4>
+                    <div class="interest-panel" id="interest-learning"><p>JavaScript, jQuery, HTML and CSS make it possible to build interactive tools around game projects.</p></div>
+                </section>
+                <section class="page-sidebar hub-panel" aria-labelledby="inspiration-heading">
+                    <p class="section-label">From the portfolio</p>
+                    <h2 id="inspiration-heading">Inspiration Gallery</h2>
+                    <div class="inspiration-grid">
+                        <figure>
+                            <div class="inspiration-frame"><img class="inspiration-image" src="criminally-delicious-01.jpg" alt="Criminally Delicious delivery minigame"></div>
+                            <figcaption>Criminally Delicious</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="inspiration-frame"><img class="inspiration-image" src="larping-skeleton-01.png" alt="Larping Skeleton dungeon battle"></div>
+                            <figcaption>Larping Skeleton</figcaption>
+                        </figure>
+                    </div>
+                    <div class="hub-actions" role="group" aria-label="Gallery visibility">
+                        <button class="button" id="fade-in" type="button">Fade In</button>
+                        <button class="button" id="fade-out" type="button">Fade Out</button>
+                        <button class="button" id="fade-toggle" type="button">Fade Toggle</button>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12 col-lg-6 hub-column">
+                <section class="page-sidebar hub-panel" aria-labelledby="board-heading">
+                    <p class="section-label">The next idea</p>
+                    <h2 id="board-heading">Project Board</h2>
+                    <p>Keep a short list of ideas you could turn into a prototype. You can start with one core mechanic.</p>
+                    <p class="hub-note">Try a platformer, a dungeon crawler or even roguelike.</p>
+                    <ul class="project-board" id="project-list" aria-label="Your project ideas"></ul>
+                    <p class="hub-note" id="board-empty">Your board is clear. Add your first game idea below.</p>
+                    <form id="project-form">
+                        <label for="project-input">Game idea or mini-project</label>
+                        <input id="project-input" name="project" type="text" required maxlength="200" pattern=".*\S.*" placeholder="e.g. A second TBoI" aria-describedby="project-help">
+                        <p class="hub-note" id="project-help">Describe an idea in up to 200 characters.</p>
+                        <div class="hub-actions">
+                            <button class="button" type="submit">Add Idea into List</button>
+                            <button class="button" id="remove-item" type="button" aria-describedby="remove-help">Remove Idea</button>
+                        </div>
+                        <p class="hub-note" id="remove-help">Remove Idea deletes the most recent idea from your board.</p>
+                    </form>
+                    <p class="hub-message" id="project-message" role="status">Ready when inspiration strikes.</p>
+                </section>
+                <section class="page-sidebar hub-panel" aria-labelledby="workshop-heading">
+                    <p class="section-label">Tools for the next prototype</p>
+                    <h2 id="workshop-heading">Skill Workshop</h2>
+                    <p>Keep a toolkit for the games you want to build.</p>
+                    <ul class="skill-list" id="skill-list">
+                        <li>C#</li><li>Unity</li><li>JavaScript</li><li>HTML &amp; CSS</li>
+                    </ul>
+                    <form id="skill-form">
+                        <label for="skill-input">New technical skill</label>
+                        <input id="skill-input" name="skill" type="text" required maxlength="50" pattern=".*\S.*" placeholder="e.g. Level design" aria-describedby="skill-help">
+                        <p class="hub-note" id="skill-help">One skill at a time, up to 50 characters. Remove Skill deletes the last skill.</p>
+                        <div class="hub-actions">
+                            <button class="button" type="submit">Add Skill</button>
+                            <button class="button" id="prepend-skill" type="button">Prepend Skill</button>
+                            <button class="button" id="remove-skill" type="button">Remove Skill</button>
+                        </div>
+                    </form>
+                    <p class="workshop-message" id="skill-message" role="status">Your starting toolkit is ready to edit.</p>
+                    <h3>Prototype planning targets</h3>
+                    <p class="hub-note">Explore a mix of technical skills for a prototype. These targets are planning values, not a rating of professional ability.</p>
+                    <p class="skill-label">Unity <span>80%</span></p>
+                    <div class="skill-track"><div class="skill-fill" id="unity-bar" role="progressbar" aria-label="Unity planning target" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
+                    <p class="skill-label">C# <span>65%</span></p>
+                    <div class="skill-track"><div class="skill-fill" id="csharp-bar" role="progressbar" aria-label="C sharp planning target" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
+                    <p class="skill-label">JavaScript <span>50%</span></p>
+                    <div class="skill-track"><div class="skill-fill" id="javascript-bar" role="progressbar" aria-label="JavaScript planning target" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
+                    <button class="button" id="animate-skills" type="button" aria-pressed="false">Animate My Skills</button>
+                    <p class="workshop-message" id="animation-message" role="status">Show the targets, then press again to reset.</p>
+                </section>
+                <section class="page-sidebar hub-panel" aria-labelledby="connections-heading">
+                    <p class="section-label">Find the work &amp; say hello</p>
+                    <h2 id="connections-heading">Connections</h2>
+                    <p>Selected platform: <b id="social-platform">GitHub</b></p>
+                    <p><a id="social-link" href="https://github.com/HamaZhai">GitHub / HamaZhai</a></p>
+                    <button class="button" id="switch-platform" type="button">Switch to itch.io</button>
+                    <h3>Contact card preview</h3>
+                    <form id="connection-form">
+                        <label for="connection-name">Name</label>
+                        <input id="connection-name" name="name" type="text" maxlength="100" autocomplete="name" aria-describedby="connection-help">
+                        <label for="connection-email">Email</label>
+                        <input id="connection-email" name="email" type="email" maxlength="254" autocomplete="email" aria-describedby="connection-help">
+                        <p class="hub-note" id="connection-help">Preview your details here. Nothing is sent or saved.</p>
+                    </form>
+                    <div class="contact-preview" aria-live="polite">
+                        <p><b>Name:</b> <span id="preview-name">Your name</span></p>
+                        <p><b>Email:</b> <span id="preview-email">Your email</span></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <noscript><p>Enable JavaScript to use the profile, project board and interactive workshop.</p></noscript>
+    </main>
+    <div class="site-footer">
+        <p>Made by Zhasulan Akkulov | SE-2538</p>
+        <a href="index.html#home">Back to portfolio</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="hub-jquery.js"></script>
+</body>
+</html>
